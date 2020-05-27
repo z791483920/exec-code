@@ -1,7 +1,7 @@
 import React from "react";
 import { Provider, connect } from "react-redux";
 import Counter from "./Counter";
-import reactLogo from "../assets/react-logo.png";
+// import reactLogo from "../assets/react-logo.png";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 import A from "./A";
@@ -21,8 +21,8 @@ export default class Root extends React.Component {
     const prefix = window.Wrapper ? "/app1" : "";
     return (
       <Router>
-        <Link to={`${prefix}/a`}>a</Link>
-        <Link to={`${prefix}/b`}>b</Link>
+        <Link style={{marginRight: 16}} to={`${prefix}/a`}>下级路由A</Link>
+        <Link to={`${prefix}/b`}>下级路由B</Link>
 
         <Switch>
           <Route exact path={`${prefix}/a`} render={() => <A />} />
@@ -36,14 +36,14 @@ export default class Root extends React.Component {
     let ret = <div></div>;
     if (!window.Wrapper) {
       const store = require("./store");
-      console.log(store, "store");
       ret = (
         <Provider store={store.storeInstance}>
           <div>
             <h3>我是自身导航栏</h3>
 
             <div style={{ marginTop: 100 }}>
-              <img src={reactLogo} style={{ width: 100 }} /> <br />
+              <h3>LOGO</h3>
+              <br />
               This was rendered by App1, which is written in React.
               <Counter
                 globalEventDistributor={this.state.globalEventDistributor}
@@ -58,7 +58,8 @@ export default class Root extends React.Component {
         ret = (
           <Provider store={this.state.store}>
             <div style={{ marginTop: 100 }}>
-              <img src={reactLogo} style={{ width: 100 }} /> <br />
+              <h3>LOGO</h3>
+              <br />
               This was rendered by App1, which is written in React.
               <Counter
                 globalEventDistributor={this.state.globalEventDistributor}

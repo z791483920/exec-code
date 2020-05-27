@@ -1,6 +1,8 @@
 <template>
   <div id="app2">
-    <img src="./assets/logo.png" />
+    <!-- <img src="./assets/logo.png" />
+     -->
+     <h3>LOGO</h3>
     <HelloWorld msg="Welcome to Your Vue.js App" />
     <br />
     <router-link :to="{ path: '/app2/a' }">下级路由A</router-link>

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Provider, connect} from 'react-redux';
 import Counter from './counter';
-import reactLogo from '../assets/react-logo.png'
+// import reactLogo from '../assets/react-logo.png'
 
 
 export default class Root extends React.Component {
@@ -24,7 +24,7 @@ export default class Root extends React.Component {
             ret =
                 <Provider store={this.state.store}>
                     <div style={{marginTop: 100}}>
-                        <img src={reactLogo} style={{width: 100}}/> <br />
+                        <h3>LOGO</h3> <br />
                         This was rendered by App3, which is written in React.
                         <Counter globalEventDistributor={this.state.globalEventDistributor}/>
                     </div>

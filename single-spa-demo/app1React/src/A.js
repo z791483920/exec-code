@@ -6,7 +6,7 @@ class A extends React.Component {
     render() {
         return (
             <div>
-              A----->component
+              A----->组件
             </div>
         )
     }
