@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+  </head>
+  <body>
+    <div class="navbar">
+      <ul id="menu-pins-list">
+        <li data-to="/app1">
+          <a href="/app1" data-to="/app1">
+            App 1 (React)
+          </a>
+        </li>
+        <li data-to="/app2">
+          <a href="/app2" data-to="/app2">
+            App 2 (Vue)
+          </a>
+        </li>
+        <li data-to="/app3">
+          <a href="/app3" data-to="/app3">
+            App 3 (React)
+          </a>
+        </li>
+      </ul>
+    </div>
+    <script src="http://e-static.oss-cn-shanghai.aliyuncs.com/js/systemjs/system.0.20.19.js"></script>
+    <script>
+      window.Wrapper = true;
+    </script>
+    <script>
+      function init() {
+        let dom = document.querySelector("#menu-pins-list");
+        dom.onclick = function (e) {
+          e.preventDefault();
+          window.singleSpa.navigateToUrl(e.target.dataset.to);
+        };
+      }
+      init();
+    </script>
+  </body>
+</html>
