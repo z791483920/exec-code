@@ -7,7 +7,6 @@
       "importHelpers": true,
       "sourceMap": true,
       "rootDir": "./components",
-      "outDir": "./es",
       "strict": true,
       "noUnusedLocals": true,
       "noUnusedParameters": true,
