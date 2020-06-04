@@ -33,7 +33,7 @@ const babelLoaderConfig = {
           // modules: 'commonjs',
           useBuiltIns: "usage",
           corejs: 3,
-          targets: { browsers: SUPPORT_BROWSERS },
+          targets: { browsers: SUPPORT_BROWSERS},
         },
       ],
       "@babel/preset-react",
@@ -70,7 +70,7 @@ export default {
     publicPath: "/",
     filename: "[name].js",
     chunkFilename: "[name].js",
-    libraryTarget: 'umd',
+    libraryTarget: 'commonjs2',
   },
   optimization: {
     splitChunks: {
