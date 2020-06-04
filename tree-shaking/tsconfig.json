@@ -1,0 +1,26 @@
+{
+    "include": ["components", "types"],
+    "compilerOptions": {
+      "target": "esnext",
+      "module": "esnext",
+      "lib": ["dom", "esnext"],
+      "importHelpers": true,
+      "sourceMap": true,
+      "rootDir": "./components",
+      "strict": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
+      "emitDeclarationOnly": true,
+      "declarationDir": "./types",
+      "moduleResolution": "node",
+      "baseUrl": ".",
+      "paths": {
+        "*": ["components/*", "node_modules/*"],
+      },
+      "esModuleInterop": true,
+      "allowJs": true,
+      "declaration": true,
+    }
+  }
