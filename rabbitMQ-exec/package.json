@@ -1,0 +1,15 @@
+{
+    "name": "rabbitMQ-exec",
+    "version": "1.0.0",
+    "description": "消息队列",
+    "main": "consumer.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "zengyang",
+    "license": "ISC",
+    "dependencies": {
+      "amqplib": "^0.5.6"
+    }
+  }
+  
